@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .message {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .valid {
+            color: green;
+        }
+        .invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Email Validation</h2>
+    <label for="email">Enter your Email:</label>
+    <input type="text" id="email" oninput="validateEmail()">
+    <p id="message" class="message"></p>
+</div>
+
+<script>
+    function validateEmail() {
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message");
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (emailPattern.test(email)) {
+            message.textContent = "✅ Valid email!";
+            message.className = "message valid";
+        } else {
+            message.textContent = "❌ Invalid email! Please enter a correct format.";
+            message.className = "message invalid";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+
+    /* Background GIF */
+    background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExczZ1ZGxpZWNkbTc5N3IxdnJxcDBmZGZuZ2V5Ym4yamxqeWVqbHJkeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LHZyixOnHwDDy/giphy.gif') 
+                no-repeat center center fixed;
+    background-size: cover;
+
+    /* Transparency Effect */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+
+    /* Transition Effect */
+    transition: background-size 0.5s ease-in-out;
+}
+
+/* Change background size on hover */
+body:hover {
+    background-size: 110%;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #fff;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .animate-text {
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            animation: slideBlink 2s infinite alternate;
+        }
+
+        @keyframes slideBlink {
+            0% { transform: translateX(-20px); opacity: 0.5; }
+            100% { transform: translateX(20px); opacity: 1; }
+        }
+
+        .btn {
+            background: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .btn:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Animated Web Page</h1>
+
+    <div class="card">
+        <p>This card scales up when hovered!</p>
+    </div>
+
+    <p class="animate-text">This text moves and blinks!</p>
+
+    <button class="btn" onclick="alert('You clicked the button!')">Click Me</button>
+
+</body>
+</html>

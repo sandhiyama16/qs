@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.io.*, javax.servlet.*, javax.servlet.http.*" %>
+<%
+    // Get the current session
+    HttpSession session = request.getSession();
+
+    // Set an approximate initial visitor count (e.g., 1000)
+    Integer visitorCount = (Integer) application.getAttribute("visitorCount");
+
+    if (visitorCount == null) {
+        visitorCount = 1000; // Start with an approximate count
+    }
+
+    // Check if the visitor is new and increment the count
+    if (session.isNew()) {
+        visitorCount += 1;
+        application.setAttribute("visitorCount", visitorCount);
+    }
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Website Visitor Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .counter-box {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome to Our Website!</h2>
+    <div class="counter-box">
+        <p>Total Visitors: <%= visitorCount %></p>
+    </div>
+
+</body>
+</html>

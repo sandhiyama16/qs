@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Dishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+            width: 50%;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        .dish-list {
+            text-align: left;
+            display: inline-block;
+        }
+        input[type="submit"] {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Favorite Dishes</h2>
+        <form action="ConfirmedDishesServlet" method="post">
+            <div class="dish-list">
+                <label><input type="checkbox" name="dishes" value="Pizza"> Pizza</label><br>
+                <label><input type="checkbox" name="dishes" value="Burger"> Burger</label><br>
+                <label><input type="checkbox" name="dishes" value="Pasta"> Pasta</label><br>
+                <label><input type="checkbox" name="dishes" value="Salad"> Salad</label><br>
+                <label><input type="checkbox" name="dishes" value="Sushi"> Sushi</label><br>
+            </div>
+            <br><br>
+            <input type="submit" value="Confirm Selection">
+        </form>
+    </div>
+</body>
+</html>

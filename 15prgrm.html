@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Repeat Example</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-vector/elegant-swan-pattern_23-2148482259.jpg?t=st=1738938128~exp=1738941728~hmac=5c13ed41f4900c545768aecaddfd27610e2cc2b57798306e436887e8b6954799&w=740'); /* Replace with your image URL */
+            background-repeat: repeat; /* Options: no-repeat, repeat-x, repeat-y */
+            background-size: cover; /* Adjusts the image to cover the entire page */
+            background-position: center; /* Centers the background image */
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-vintage-floral-pattern_79603-1671.jpg?t=st=1738938099~exp=1738941699~hmac=92b8a84e9abf1b50f125036d9ed7297ce82134bb3e1426618b211b44a7b26e98&w=1060'); /* Replace with your pattern image */
+            background-repeat: repeat-x; /* This will repeat the image horizontally */
+            border: 2px solid black;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Background Repeat Example</h1>
+    <div class="box">This box has a repeated background image along the X-axis.</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    <script>
+        function addEmployee() {
+            var empId = document.getElementById("empId").value;
+            var empName = document.getElementById("empName").value;
+            var empDept = document.getElementById("empDept").value;
+            var empSalary = document.getElementById("empSalary").value;
+            
+            if (empId === "" || empName === "" || empDept === "" || empSalary === "") {
+                alert("Please fill all the fields");
+                return;
+            }
+            
+            var table = document.getElementById("employeeTable");
+            var row = table.insertRow(-1);
+            
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            
+            cell1.innerHTML = empId;
+            cell2.innerHTML = empName;
+            cell3.innerHTML = empDept;
+            cell4.innerHTML = empSalary;
+            
+            document.getElementById("empForm").reset();
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Employee Details</h2>
+    <form id="empForm" onsubmit="return false;">
+        Employee ID: <input type="text" id="empId"><br><br>
+        Name: <input type="text" id="empName"><br><br>
+        Department: <input type="text" id="empDept"><br><br>
+        Salary: <input type="text" id="empSalary"><br><br>
+        <button onclick="addEmployee()">Add Employee</button>
+    </form>
+    
+    <h2>Employee Details</h2>
+    <table border="1" id="employeeTable">
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+    </table>
+</body>
+</html>

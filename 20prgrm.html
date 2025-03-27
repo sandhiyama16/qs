@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji with Fixed Size & Positioning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .emoji {
+            font-size: 50px; /* Fixed size */
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .sticky {
+            position: sticky;
+            top: 10px;
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Emojis with Fixed Size & Different Positioning</h2>
+    
+    <div class="emoji absolute">😀 (Absolute)</div>
+    <div class="emoji relative">😃 (Relative)</div>
+    <div class="emoji fixed">😄 (Fixed)</div>
+    <div class="emoji sticky">😁 (Sticky)</div>
+
+</body>
+</html>

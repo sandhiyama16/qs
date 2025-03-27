@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Object Methods in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            display: inline-block;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #007bff;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>String Object Methods in JavaScript</h2>
+        <label>Enter a string:</label><br>
+        <input type="text" id="userInput" placeholder="Type something..." required>
+        <br>
+        <label>Enter an index number:</label><br>
+        <input type="number" id="indexInput" min="0" value="0">
+        <br>
+        <button onclick="processString()">Process String</button>
+
+        <h3>Results:</h3>
+        <p id="charAt"></p>
+        <p id="charCodeAt"></p>
+        <p id="concat"></p>
+        <p id="unicodeToString"></p>
+        <p id="toUpperCase"></p>
+    </div>
+
+    <script>
+        function processString() {
+            let userString = document.getElementById("userInput").value;
+            let index = parseInt(document.getElementById("indexInput").value);
+
+            if (userString === "") {
+                alert("Please enter a string.");
+                return;
+            }
+
+            if (index < 0 || index >= userString.length) {
+                alert("Please enter a valid index within the string length.");
+                return;
+            }
+
+            // (1) Get the character at the specified index
+            let charAtIndex = userString.charAt(index);
+            document.getElementById("charAt").innerHTML = "Character at index " + index + ": " + charAtIndex;
+
+            // (2) Get Unicode value at specified index
+            let unicodeValue = userString.charCodeAt(index);
+            document.getElementById("charCodeAt").innerHTML = "Unicode at index " + index + ": " + unicodeValue;
+
+            // (3) Concatenate two strings
+            let additionalString = " is amazing!";
+            let joinedString = userString.concat(additionalString);
+            document.getElementById("concat").innerHTML = "Concatenated String: " + joinedString;
+
+            // (4) Convert Unicode to a character (for first character's Unicode)
+            let unicodeCharacter = String.fromCharCode(unicodeValue);
+            document.getElementById("unicodeToString").innerHTML = "Unicode " + unicodeValue + " as Character: " + unicodeCharacter;
+
+            // (5) Convert string to uppercase
+            let upperCaseString = userString.toUpperCase();
+            document.getElementById("toUpperCase").innerHTML = "Uppercase String: " + upperCaseString;
+        }
+    </script>
+
+</body>
+</html>

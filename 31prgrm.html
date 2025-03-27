@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Current Date & Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #datetime {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Find Current Date & Time</h2>
+    <button onclick="showDateTime()">Get Current Date & Time</button>
+    <p id="datetime"></p>
+
+    <script>
+        function showDateTime() {
+            let now = new Date(); // Get current date and time
+            let dateTimeString = now.toLocaleString(); // Convert to readable format
+            document.getElementById("datetime").innerText = "Current Date & Time: " + dateTimeString;
+        }
+    </script>
+
+</body>
+</html>

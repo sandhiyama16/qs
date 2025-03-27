@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+/* Header & Navbar */
+.header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.content, .table-section, .form-section {
+    padding: 20px;
+}
+
+.image {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Table */
+.table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.table th {
+    background: #007bff;
+    color: white;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
