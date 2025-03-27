@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="4StudentRegistrationServlet.java" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="regNo">Registration Number:</label><br>
+        <input type="text" id="regNo" name="regNo" required><br><br>
+
+        <label for="course">Course:</label><br>
+        <input type="text" id="course" name="course" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
