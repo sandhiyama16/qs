@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Positioning Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            position: relative;
+            padding: 10px;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            margin-left: -50px; /* Overlapping effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+    </div>
+</body>
+</html>
