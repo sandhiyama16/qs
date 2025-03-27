@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning Example</title>
+    <style>
+        /* Basic style for the body */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Style for the parent container */
+        .parent {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            margin-bottom: 30px;
+            border: 2px solid black; /* Added border for visibility */
+        }
+
+        /* Style for the child element relative to the parent */
+        .child-relative-parent {
+            position: relative;
+            top: 30px;  /* Moves 30px from the top of the parent */
+            left: 50px;  /* Moves 50px from the left of the parent */
+            width: 150px;
+            height: 100px;
+            background-color: coral;
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid black; /* Added border for visibility */
+        }
+
+        /* Style for the sibling container */
+        .sibling {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightgreen;
+            border: 2px solid black; /* Added border for visibility */
+        }
+
+        /* Style for the child element relative to itself */
+        .child-relative-self {
+            position: relative;
+            top: 20px;  /* Moves 20px down from its original position */
+            left: 40px;  /* Moves 40px to the right from its original position */
+            width: 150px;
+            height: 100px;
+            background-color: darkorange;
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid black; /* Added border for visibility */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child-relative-parent">
+            <p>This box is positioned relative to the parent element.</p>
+        </div>
+    </div>
+
+    <div class="sibling">
+        <div class="child-relative-self">
+            <p>This box is positioned relative to itself.</p>
+        </div>
+    </div>
+</body>
+</html>
