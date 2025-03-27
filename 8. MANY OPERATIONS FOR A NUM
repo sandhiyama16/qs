@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Number Operations</title>
+</head>
+<body>
+    <h2>JavaScript Number Operations</h2>
+    
+    <label for="numInput">Enter a number:</label>
+    <input type="number" id="numInput">
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="exp"></p>
+    <p id="fixed"></p>
+    <p id="toString"></p>
+    <p id="negInfinity"></p>
+
+    <script>
+        function calculate() {
+            let num = new Number(document.getElementById("numInput").value); // Using Number object
+
+            if (isNaN(num)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            // Exponential value
+            let expValue = Math.exp(num);
+            document.getElementById("exp").innerHTML = `Exponential value of ${num}: ${expValue}`;
+
+            // Limit decimal digits
+            let fixedValue = expValue.toFixed(2);
+            document.getElementById("fixed").innerHTML = `Value with 2 decimal places: ${fixedValue}`;
+
+            // Convert number to string
+            let strValue = num.toString();
+            document.getElementById("toString").innerHTML = `Number as a string: "${strValue}"`;
+
+            // Return negative infinity using Number object
+            let negInf = new Number(-Infinity);
+            document.getElementById("negInfinity").innerHTML = `Negative Infinity: ${negInf}`;
+        }
+    </script>
+</body>
+</html>
